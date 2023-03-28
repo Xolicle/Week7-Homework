@@ -76,7 +76,7 @@ function currentCity(city) {
   let city2 = document.querySelector("#city");
   city2.innerHTML = `${city}`;
 
-  let currentUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city2}&units=metric&appid=${apiKey}`;
+  let currentUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(currentUrl).then(displayWeather);
 }
 dateAndTime();
