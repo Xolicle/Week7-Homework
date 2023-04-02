@@ -85,8 +85,7 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   forecast.forEach(
     (day, index) =>
-     
-   alert("What is this");l(document.getElementById("day" + (index + 1)).innerHTML = day.dt)
+     l(document.getElementById("day" + (index + 1)).innerHTML = day.dt)
   );
 }
 function getForecast(coords) {
