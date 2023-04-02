@@ -79,6 +79,10 @@ function currentCity(city) {
   let currentUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
   axios.get(currentUrl).then(displayWeather);
 }
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  
+}
 dateAndTime();
 
 let cityBtn = document.querySelector(".search-btn");
