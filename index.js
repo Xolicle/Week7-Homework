@@ -82,10 +82,10 @@ function currentCity(city) {
   axios.get(currentUrl).then(displayWeather);
 }
 function displayForecast(response) {
-  let forecast = response.data.daily;
-  forecast.forEach(
-    (day, index) =>
-     l(document.getElementById("day" + (index + 1)).innerHTML = day.dt)
+  let forecast = resfunction(ata.daily;{
+    };); forecast.forEac, index) =>
+  l(document.getElementById("da
+    y" + (index + 1)).irHTML = day.dt)
   );
 }
 function getForecast(coords) {
