@@ -81,6 +81,8 @@ function currentCity(city) {
 }
 function displayForecast(response) {
   let forecast = response.data.daily;
+  forecast.forEach((day, index) => 
+  document.getElementById("day"+(index+1)).innerHTML = day.dt;
   
 }
 dateAndTime();
