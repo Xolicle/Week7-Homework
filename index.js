@@ -31,9 +31,8 @@ function displayWeather(response) {
   let windValue = response.data.wind.speed;
   humidity.innerHTML = `Humidity: ${humidityValue}%`;
   wind.innerHTML = `Wind: ${windValue}m/s`;
-  getForecast(response.data.coord);e
-  e;
-  e;
+  getForecast(response.data.coord);
+
 }
 function searchLoc() {
   let citySearch = document.querySelector("#city-search");
@@ -86,7 +85,8 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   forecast.forEach(
     (day, index) =>
-      (document.getElementById("day" + (index + 1)).innerHTML = day.dt)
+     
+   alert("What is this");l(document.getElementById("day" + (index + 1)).innerHTML = day.dt)
   );
 }
 function getForecast(coords) {
