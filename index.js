@@ -31,6 +31,9 @@ function displayWeather(response) {
   let windValue = response.data.wind.speed;
   humidity.innerHTML = `Humidity: ${humidityValue}%`;
   wind.innerHTML = `Wind: ${windValue}m/s`;
+  getForecast(response.data.coord);e
+  e;
+  e;
 }
 function searchLoc() {
   let citySearch = document.querySelector("#city-search");
@@ -81,8 +84,16 @@ function currentCity(city) {
 }
 function displayForecast(response) {
   let forecast = response.data.daily;
-  forecast.forEach((day, index) => 
-  document.getElementById("day"+(index+1)).innerHTML = day.dt;
+  forecast.forEach(
+    (day, index) =>
+      (document.getElementById("day" + (index + 1)).innerHTML = day.dt)
+  );
+}
+function getForecast(coords) {
+  let forecastUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lon}&units=metric&appid=${apiKey}`;
+  axios.get(forecastUrl).then(displayForecasti;e
+  
+
   
 }
 dateAndTime();
